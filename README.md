@@ -49,7 +49,7 @@ Caso não consigam encontrar, segue o link: https://www.visualstudio.com/pt-br/d
 
 Haverá as seguintes versões:
 
-![Visual Studio Versões](https://github.com/josemalcher/schoolofnet-IniciandocomCSharp/tree/master/img/c_visual_studio.png)
+![Visual Studio Versões](https://raw.githubusercontent.com/josemalcher/schoolofnet-IniciandocomCSharp/master/img/c_visual_studio.png)
 
 
 Existem diferenças entre as versões paga e gratuita. Utilizaremos a versão community que é gratuita. Se decidirem investir em outra versão, terão alguns recursos e vantagens adicionais. A versão community atenderá, perfeitamente, para a conclusão do nosso objetivo.

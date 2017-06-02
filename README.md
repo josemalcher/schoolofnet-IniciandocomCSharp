@@ -28,6 +28,40 @@ https://www.schoolofnet.com/curso-iniciando-com-c/
 
 ## <a name="parte1">Instalação do Visual Studio</a>
 
+Sejam bem vindos a mais um conteúdo da School of Net.
+
+Temos como objetivo dar uma base sólida de conhecimentos para trabalhar com a linguagem C#.
+
+Alguns tópicos que serão abordados:
+
+- TIPOS DE DADOS
+- VARIÁVEIS
+- OBJETOS
+- CLASSES
+- ENCAPSULAMENTO
+- MÉTODOS
+- ESTRUTURAS CONDICIONAIS
+- Visual Studio
+
+Para seguir com os próximos conteúdos, instalaremos o Visual Studio. Para instalar o programa, basta pesquisar no google por donwload visual studio. O primeiro resultado da busca, provavelmente, será o link correto do site oficial.
+
+Caso não consigam encontrar, segue o link: https://www.visualstudio.com/pt-br/downloads/.
+
+Haverá as seguintes versões:
+
+![Visual Studio Versões](https://github.com/josemalcher/schoolofnet-IniciandocomCSharp/tree/master/img/c_visual_studio.png)
+
+
+Existem diferenças entre as versões paga e gratuita. Utilizaremos a versão community que é gratuita. Se decidirem investir em outra versão, terão alguns recursos e vantagens adicionais. A versão community atenderá, perfeitamente, para a conclusão do nosso objetivo.
+
+Mesmo que tenham uma máquina muito boa, a instalação pode demorar um pouco, tenham paciência, para que consigam concluir a instalação. A instalação demora porque precisará instalar recursos como ASP.NET, versões do framework e muitas outras funcionalidades.
+
+A instalação perguntará se deseja fazer uma instalação default ou personalizada. O ideal é que faça a instalação default, porque ela já vem com todas as features, templates e configurações necessárias, que precisarão. Utilizem a instalação personalizada, somente se souberem muito bem o que estão fazendo, senão podem perder funcionalidades.
+
+Geralmente, a instalação vai até o final sem problema algum. Se houver algum problema, pode ser que a máquina não possua as configurações, mínimas, exigidas pelo programa ou que falte algum recurso. Neste caso, terão que decobrir o problema e resolvê-lo, para que consigam finalizar a instalação.
+
+O Visual Studio é uma ferramenta fantástica e com certeza irão gostar muito.
+
 [Voltar ao Índice](#indice)
 
 ---

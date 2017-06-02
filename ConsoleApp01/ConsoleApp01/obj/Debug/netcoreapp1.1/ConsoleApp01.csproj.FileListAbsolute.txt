@@ -1,0 +1,9 @@
+C:\Users\josemalcher\Documents\09-Workspaces\workspace-schoolofnet-iniciando_com_csharp\ConsoleApp01\ConsoleApp01\bin\Debug\netcoreapp1.1\ConsoleApp01.deps.json
+C:\Users\josemalcher\Documents\09-Workspaces\workspace-schoolofnet-iniciando_com_csharp\ConsoleApp01\ConsoleApp01\bin\Debug\netcoreapp1.1\ConsoleApp01.runtimeconfig.json
+C:\Users\josemalcher\Documents\09-Workspaces\workspace-schoolofnet-iniciando_com_csharp\ConsoleApp01\ConsoleApp01\bin\Debug\netcoreapp1.1\ConsoleApp01.runtimeconfig.dev.json
+C:\Users\josemalcher\Documents\09-Workspaces\workspace-schoolofnet-iniciando_com_csharp\ConsoleApp01\ConsoleApp01\bin\Debug\netcoreapp1.1\ConsoleApp01.dll
+C:\Users\josemalcher\Documents\09-Workspaces\workspace-schoolofnet-iniciando_com_csharp\ConsoleApp01\ConsoleApp01\bin\Debug\netcoreapp1.1\ConsoleApp01.pdb
+C:\Users\josemalcher\Documents\09-Workspaces\workspace-schoolofnet-iniciando_com_csharp\ConsoleApp01\ConsoleApp01\obj\Debug\netcoreapp1.1\ConsoleApp01.csprojResolveAssemblyReference.cache
+C:\Users\josemalcher\Documents\09-Workspaces\workspace-schoolofnet-iniciando_com_csharp\ConsoleApp01\ConsoleApp01\obj\Debug\netcoreapp1.1\ConsoleApp01.AssemblyInfo.cs
+C:\Users\josemalcher\Documents\09-Workspaces\workspace-schoolofnet-iniciando_com_csharp\ConsoleApp01\ConsoleApp01\obj\Debug\netcoreapp1.1\ConsoleApp01.dll
+C:\Users\josemalcher\Documents\09-Workspaces\workspace-schoolofnet-iniciando_com_csharp\ConsoleApp01\ConsoleApp01\obj\Debug\netcoreapp1.1\ConsoleApp01.pdb

@@ -68,6 +68,21 @@ O Visual Studio é uma ferramenta fantástica e com certeza irão gostar muito.
 
 ## <a name="parte2">CSharp DotNet</a>
 
+Falaremos sobre o CSharp. Para entenderem esta linguagem vocês devem ter conhecimento de que ela foi desenvolvida como parte da plataforma DotNet framework. Este framework está embutido, como parte da instalação do Visual Studio, e nos permite a criação de itens como: serviços, interfaces, banco de dados, arquivos xml e escrever ou ler arquivos.
+
+O DotNet framework, utilizado com a linguagem C#, permite desenvolver aplicações de negócios, web applications, portais, sites, jogos e também aplicações mobile.
+
+Para consolidar este aprendizado, vamos explicar que o DotNet está sob duas bases:
+
+- CLR (COMMON LANGUAGE RUNTIME) - AMBIENTE DE EXECUÇÃO DO DOTNET FRAMEWORK O DOTNET PERMITE UTILIZAR OUTRAS LINGUAGENS, ALÉM DA CSHARP, PARA DESENVOLVER, E O CLR FAZ UMA COMPILAÇÃO PARA UMA LINGUAGEM *INTERMEDIÁRIA PARA QUE O SISTEMA OPERACIONAL SEJA CAPAZ DE INTERPRETAR. NÃO IMPORTA A LINGUAGEM UTILIZADA PARA PROGRAMAR COM DOTNET, O CLR SEMPRE CRIARÁ UMA INTERFACE INTERMEDIÁRIA PARA LEITURA.
+
+- FCL (FRAMEWORK CLASS LIBRARY)
+    - ESTE É RESPONSÁVEL POR PERMITIR CONSTRUIR AS APLICAÇÕES. PERMITE EXPRESSÕES REGULARES, PERSISTÊNCIA EM BANCO DE DADOS, CRIAÇÃO DE APLICAÇÕES DESKTOP, WEB OU SERVIÇOS. O ASP.NET É PARTE DO DOTNET FRAMEWORK.
+
+O CSharp é uma, entre muitas linguagens, que podem ser usadas no DotNet. Além de ser parecido com as linguagens: java, javascript ou C++. Se tiverem conhecimento de uma das linguagens, citadas anteriormente, não terão problemas para adaptarem-se ao CSharp.
+
+No próximo módulo veremos os recursos que esta ferramenta oferece.
+
 [Voltar ao Índice](#indice)
 
 ---

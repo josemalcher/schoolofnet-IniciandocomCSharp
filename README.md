@@ -4,6 +4,8 @@ Resumo do curso:
 
 https://www.schoolofnet.com/curso-iniciando-com-c/
 
+[Material para Referência - Caelum C# e OO](https://www.caelum.com.br/apostila-csharp-orientacao-objetos/)
+
 ---
 
 ## <a name="indice">Índice</a>
@@ -88,6 +90,142 @@ No próximo módulo veremos os recursos que esta ferramenta oferece.
 ---
 
 ## <a name="parte3">Hello World</a>
+
+Iniciaremos com a codificação da linguagem C# e, para isso, começaremos um projeto utilizando o Visual Studio.
+
+Há duas formas de iniciar um projeto: utilizando a start page ou utilizando o menu superior no item File/New/Project.
+
+![Novo projeto](https://raw.githubusercontent.com/josemalcher/schoolofnet-IniciandocomCSharp/master/img/csharp_new_project.png)
+
+Qualquer caminho escolhido, apresentará uma tela para a escolha de templates. Dentro da linguagem C# há inúmeras opções de templates.
+
+- WINDOWS
+- WEB
+- WORKFLOW
+
+Apesar de existirem muitos templates, escolheremos o Console Application, que está dentro do item C#, geral do menu. Vejam na imagem abaixo:
+
+![Templates](https://raw.githubusercontent.com/josemalcher/schoolofnet-IniciandocomCSharp/master/img/csharp_templates.png)
+
+Utilizaremos o console para focarmos apenas nas lógicas e recursos da linguagem, sem precisarmos nos preocupar com a parte de layout e estilização de nossos exemplos.
+
+Ao selecionar o tipo de template, precisamos informar um nome para a aplicação e para a soluction. Em seguida, clicamos em ok e aguardarmos nosso projeto ser iniciado.
+
+Se quiserem abrir a estrutura de arquivos do projeto, basta observarem o lado esquerdo da janela do Visual Studio e acessarem Solution Explorer.
+
+Vale ressaltar que, primeiro criamos a soluction e é dentro desta soluction que criaremos toda aplicação. A partir desta soluction criaremos um arquivo chamado Program.cs, onde desenvolveremos nossos exemplos.
+
+Quando abrirem o arquivo Program.cs terá o seguinte código:
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleCsharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Código
+        }
+    }
+}
+```
+
+Não utilizaremos esta estrutura, que já vem pronta, para a criação do nosso projeto. Criaremos tudo do zero, para que vocês possam entender como desenvolver uma aplicação do zero.
+
+Toda classe no C# trabalhará com algumas palavras reservadas que deverão ter uma atenção especial, pois são muito utilizadas.
+
+Para que a linguagem compile nosso código e consigamos fazer qualquer coisa, teremos que, em primeiro lugar, criar uma classe para envolver todo nosso código. Isso é obrigatório para obtermos resultado com a linguagem.
+
+```csharp
+class ConsoleCsharp
+{
+
+}
+```
+
+Depois de criada a classe, deveremos criar uma método, utilizando algumas palavras reservadas, que explicaremos no decorrer do conteúdo.
+
+Criaremos um método chamado Main e, obrigatoriamente, deverá ter este nome, porque o C# entenderá que este método existe.
+
+```csharp
+class ConsoleCsharp
+{
+    static void Main()
+    {
+
+    }
+}
+```
+
+Para conferir se nosso código está com as instruções corretas e se o C# está reconhecendo meu código, sem nenhum erro, clicaremos no menu Build/Build Soluction ou apertarmos F6 no teclado. Este comando compilará o código em busca de erros. Se estiver tudo correto, ele retornará a mensagem Build succeeded, em uma barra no rodapé do programa. Se houver algum erro, terá a mensagem Build Failed.
+
+É importante esclarecer que, executar o comando build não quer dizer que executamos o projeto, nós apenas o construímos. Para executar, deveremos clicar no botão Start, que fica na parte superior do Visual Studio.
+
+Executando a aplicação com o start ou clicando em F5, que tem o mesmo resultado, aparecerá uma tela abrindo e fechando, rapidamente. Este tela é como se fosse uma tela de terminal.
+
+O programa executa e fecha, porque não inserimos nada que faça ele ficar aberto. Por enquanto temos apenas uma classe e um método, que não executam nada. Para que o console fique aberto, no momento da execução, o C# disponibiliza um recurso. Vejam o código:
+
+Utilizando dll inline
+
+```csharp
+class ConsoleCsharp
+{
+    static void Main()
+    {
+        System.Console.ReadLine();
+    }
+}
+```
+
+Usando dll com namespace
+
+```csharp
+using System;
+
+class ConsoleCsharp
+{
+    static void Main()
+    {
+        Console.ReadLine();
+    }
+}
+```
+
+A maneira mais elegante de utilizar a dll, é chamando, via namespace com o using. O código fica mais limpo e organizado.
+
+Uma dll é um código, previamente compilado, para que possamos utilizar. O C# já traz algumas dlls prontas, mas podemos criar nossas próprias dlls e também utilizar de terceiros. Estas dlls, que são disponibilizadas, são muito utilizadas durante o desenvolvimento de qualquer projeto.
+
+A dll System já faz parte do .NET Framework e está referenciada em nossa aplicação. Vocês podem ter acesso a ela através do Soluction Explorer na parte de References. Concluímos que as dlls do framework já estão instaladas e disponíveis para nossa utilização.
+
+Por enquanto temos uma tela aguardando alguma entrada de dados, mas como é de costume em todas as linguagens, criaremos um Hello World. Assim enxergarão uma frase, no console.
+
+```csharp
+using System;
+
+class ConsoleCsharp
+{
+    static void Main()
+    {
+        Console.WriteLine("Hello, World !!!");
+        Console.ReadLine();
+    }
+}
+```
+
+Pronto! Agora temos uma mensagem do console utilizando o C#.
+
+Avançaremos com os conceitos.
+
+[2.6 - O primeiro programa em C#](https://www.caelum.com.br/apostila-csharp-orientacao-objetos/o-que-e-c-e-net/#2-6-o-primeiro-programa-em-c)
+
+
+
 
 [Voltar ao Índice](#indice)
 

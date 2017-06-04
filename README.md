@@ -331,6 +331,14 @@ Utilizando este método, podemos unir quantas variáveis quisermos em uma string
 
 ## <a name="parte5">Operadores aritiméticos</a>
 
+```csharp
+        int a = 15;
+        int b = 2;
+        // + - * % 
+       //decimal resultado = a / b;
+       decimal]resultado = Convert.ToDecimal(a) / Convert.ToDecimal(b);
+``` 
+
 [Voltar ao Índice](#indice)
 
 ---

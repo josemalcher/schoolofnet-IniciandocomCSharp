@@ -360,6 +360,33 @@ Utilizando este método, podemos unir quantas variáveis quisermos em uma string
 
 ## <a name="parte7">Estrutura condicional</a>
 
+```csharp
+            int idade = 15;
+            if (idade > 18)
+            {
+                Console.WriteLine("Autorizado");
+            }
+            else
+            {
+                Console.WriteLine("Não autorizado!!");
+            }
+
+            //ternario
+            string resultado1 = idade > 60 ? "Aposentado" : "Trabalhando";
+
+            switch (idade)
+            {
+                case 70:
+                case 80:
+                case 60: Console.WriteLine("Aposentado");
+                    break;
+                case 10: Console.WriteLine("Criança");
+                    break;
+                default Console.WriteLine("Indefinido");
+                    break;
+            }
+```
+
 [Voltar ao Índice](#indice)
 
 ---

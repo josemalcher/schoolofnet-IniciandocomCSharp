@@ -82,6 +82,18 @@ namespace ConsoleApp01
                 f--;
             } while (f > 10);
 
+            int x = 5;
+            int y = 10;
+            if( x > y)
+            {
+                Console.WriteLine("");
+            }
+            else
+            {
+                Console.WriteLine("");
+            }
+
+
            
 
 

@@ -427,6 +427,19 @@ Utilizando este método, podemos unir quantas variáveis quisermos em uma string
 
 ## <a name="parte9">Operadores comparativos</a>
 
+```csharp
+            int x = 5;
+            int y = 10;
+            if( x > y) // == , !=, >=, <=
+            {
+                Console.WriteLine("");
+            }
+            else
+            {
+                Console.WriteLine("");
+            }
+``` 
+
 [Voltar ao Índice](#indice)
 
 ---

@@ -233,6 +233,98 @@ Avançaremos com os conceitos.
 
 ## <a name="parte4">Tipos de Variáveis</a>
 
+Apresentaremos os tipos de dados e variáveis que a linguagem oferece. Para passarmos este conteúdo, trabalharemos dentro de um contexto. O contexto escolhido, para explicação deste módulo, foi o ambiente de uma empresa, onde há funcionários. 
+
+O conceito funcionários engloba vários dados e características que exemplificaremos. Começaremos pelo número da matrícula do funcionário, desta forma estaremos trabalhando com números 
+
+```csharp 
+using System; 
+class ConsoleCsharp
+{ 
+    static void Main() { 
+        int matricula; 
+        string nome; 
+        string sobrenome; 
+        DateTime dataNascimento; 
+        decimal salario; 
+        bool feriasVencidas; 
+        char sexo; 
+        
+        Console.WriteLine("Hello, World !!!"); 
+        
+        Console.ReadLine(); 
+        } 
+} 
+``` 
+
+Tipo | Descrição 
+------ | ------------- 
+int | Números inteiros 
+decimal | Números quebrados, com casas decimais 
+string | Grupo de caracteres 
+DateTime | Reservado para datas 
+bool | Verdadeiro ou falso 
+char | Armazena apenas um caracter 
+
+Depois de declararmos todos os dados do funcionário, começaremos a alimentar estas variáveis, com dados mais sólidos. 
+
+Para atribuir dados a estas variáveis, utilizamos o operador **(=)**, assim como na maioria das linguagens. 
+
+```csharp 
+using System; 
+class ConsoleCsharp 
+{ 
+    static void Main() { 
+        int matricula = 10; 
+        string nome = "Pedro"; 
+        string sobrenome = "Silva"; 
+        DateTime dataNascimento = DateTime.Now; 
+        decimal salario = 1000.50m; 
+        bool feriasVencidas = true; 
+        char sexo = 'M'; 
+        
+        Console.WriteLine(matricula); 
+        Console.ReadLine(); 
+        } 
+} 
+
+``` 
+
+Neste ponto já temos todas as variáveis com valores atribuídos. 
+
+Seguem algumas observações da linguagem: 
+
+1. Strings, sempre, deverão ser passadas com aspas duplas. Em outras linguagens, uma string pode ser atribuída utilizando qualquer tipo de aspas, tanto a simples quanto a dupla. 
+
+2. O contrário se aplica ao tipo **char**, que deverão ser passados utilizando aspas simples, para diferenciar de uma string, pois o char é capaz de armazenar apenas um caracter.
+
+3. Quando atribuimos um número decimal, devemos passar ao final do número, a letra **m**, para que a linguagem entenda que estamos falando de uma número decimal. A letra m pode ser maiúscula ou minúscula e deverá ser utilizada, sempre. 
+
+4. O **DateTime** nos fornece muitos tipos de dados, em nosso exemplo utilizamos o **now**, mas pode pegar mês, ano ou outros valores, de uma forma muito fácil. Após estas considerações, alteraremos a string **Hello World** por nossas variáveis, para testar. Colocamos a matrícula para ser impressa, mas vocês podem duplicar, para exibir todas ou alterando, uma por vez. Basta executar o código, para testarem. 
+
+## Trabalhando com strings 
+
+```csharp 
+using System; 
+class ConsoleCsharp { 
+    static void Main() { 
+        string nome = "Pedro"; 
+        string sobrenome = "Silva"; 
+        Console.WriteLine(nome + " " + sobrenome); 
+        Console.WriteLine(String.Format("{0} {1}", nome, sobrenome)); 
+        Console.ReadLine(); 
+        } 
+    } 
+``` 
+
+Notem que, no primeiro **WriteLine** utilizamos o método de concatenação para unir dois valores em uma string e no segundo, utilizamos o **String.Format**, que é o melhor método para configurar uma string. Observem que os valores entre chaves serão substituídos, ordenadamente, pelos valores passados, posteriormente. 
+
+Utilizando este método, podemos unir quantas variáveis quisermos em uma string e podemos inserir textos entre as variáveis. Ambas as formas estão corretas, mas aconselhamos trabalhar com string format, por ser mais organizada.
+
+[Variáveis e tipos primitivos](https://www.caelum.com.br/apostila-csharp-orientacao-objetos/variaveis-e-tipos-primitivos/)
+
+
+
 [Voltar ao Índice](#indice)
 
 ---

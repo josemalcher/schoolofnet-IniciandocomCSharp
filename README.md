@@ -382,7 +382,7 @@ Utilizando este método, podemos unir quantas variáveis quisermos em uma string
                     break;
                 case 10: Console.WriteLine("Criança");
                     break;
-                default Console.WriteLine("Indefinido");
+                default: Console.WriteLine("Indefinido");
                     break;
             }
 ```
@@ -392,6 +392,34 @@ Utilizando este método, podemos unir quantas variáveis quisermos em uma string
 ---
 
 ## <a name="parte8">Estrutura repetição</a>
+
+```csharp
+            int[] colecao = new int[] {1,2,3,4,5};
+            foreach(var item in colecao)
+            {
+                Console.WriteLine(item);
+            }
+
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            int indice = 5;
+            while (indice > 0)
+            {
+                Console.WriteLine(indice);
+                indice--;
+            }
+
+            int f = 12;
+            do
+            {
+                Console.WriteLine(f);
+                f--;
+            } while (f > 10);
+
+```
 
 [Voltar ao Índice](#indice)
 

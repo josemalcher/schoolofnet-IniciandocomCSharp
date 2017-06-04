@@ -446,6 +446,94 @@ Utilizando este método, podemos unir quantas variáveis quisermos em uma string
 
 ## <a name="parte10">Escrevendo métodos</a>
 
+ Para avançarmos com este assunto, apaguem todos os exemplos anteriores, ou salvem em algum lugar, caso queiram manter um histórico. O importante é que tenhamos uma estrutura limpa, para exemplificarmos bem, este assunto. 
+ 
+ Sem dúvida, um dos assuntos mais importantes para quem quer trabalhar com a linguagem. Métodos são muito úteis e muito utilizados, em qualquer projeto. Com métodos, conseguimos otimizar tarefas e ganhar muito tempo com operações repetitivas. 
+ 
+ Desta forma, tudo que for repetitivo, pode virar um método, para que ganhemos tempo e organização. É muito importante que o método tenha apenas uma responsabilidade. Assim, podemos ter um método para somar, outro para subtrair, outro para dividir e etc. O importante é não termos um método com muitas responsabilidades. ## Estrutura de um método 
+ 
+ ```csharp 
+ public static 
+ void ExibirMensagem() 
+ { 
+     Console.WriteLine("Mensagem exibida"); 
+     } 
+     static string RetornarString() 
+     { 
+         string texto = "Mensagem retornada"; 
+         return texto; 
+         } 
+ ``` 
+ 
+ Acima temos dois tipos de métodos: 
+ 
+ 1. Método público, sem retornar valores 
+ 
+ 2. Método privado, retornando um valor Temos que informar os parâmetros que formam a declaração de um método. 
+ 
+ Primeiro, temos o modificador de acesso que pode ser **public** ou **private**. Se não informarmos nenhum dos dois, a linguagem entenderá que se trata de um método private, por padrão. 
+ 
+ Um método público, pode ser acessado de qualquer local da aplicação, já o método private, só pode ser acessado de um elemento que esteja no mesmo escopo, ou na mesma classe. 
+ 
+ Em seguida, informamos se é **static** ou não. Em nosso caso, como nosso método **Main** é static, podemos definir os métodos como static, para que o visual studio consiga reconhecer estas funções e nos ajudar com o autocomplete. 
+ 
+ No próximo parâmetro, devemos informar se o método retornará alguma informação ou não. Se não retornar, devemos informar **void**, caso contrário, devemos informar o tipo de dado que ele retornará. 
+ 
+ Em nosso exemplo, temos uma do tipo void e outro que retorna uma string. Por último, temos que nomear o método, seguido de parênteses, onde serão acrescentados parâmetros, caso existam. Falaremos sobre parâmetros no próximo módulo. Dentro das chaves, desenvolveremos todas as ações que compõem aquele método. # Chamando um método 
+ 
+ ```csharp 
+ using System; 
+ class ConsoleCsharp { 
+     public static void ExibirMensagem() { 
+         Console.WriteLine("Mensagem exibida"); 
+         } 
+         static string RetornarString() { 
+             string texto = "Mensagem retornada"; 
+             return texto; } 
+             static void Main() { 
+                 ExibirMensagem(); 
+                 string retornada = RetornarString(); 
+                 Console.WriteLine(retornada); 
+                 Console.ReadLine(); 
+                 } 
+} 
+ ``` 
+ 
+ Notem que, para executar um método, basta chamar o mesmo nome que o registramos. No exemplo acima, executamos o método que imprime uma mensagem **ExibirMensagem()** e atribuímos o valor do método **RetornaString()** para uma variável, para depois imprimí-la. Isso porque o método retorna uma string, então podemos atribuir o valor retornado a uma variável.
+
+Pessoa.cs
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp01
+{
+    public class Pessoa
+    {
+        string nome;
+        string sobrenome;
+        DateTime dataNascimento;
+        char sexo;
+
+        public Pessoa()
+        {
+
+        }
+        public void falar(String mensagem)
+        {
+            Console.WriteLine(mensagem);
+        }
+    }
+}
+
+```
+
+```csharp
+Pessoa pessoa1 = new Pessoa();
+            pessoa1.falar("OLAAA!!");
+```
+
 [Voltar ao Índice](#indice)
 
 ---

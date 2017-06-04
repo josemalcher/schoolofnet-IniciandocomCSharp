@@ -93,6 +93,8 @@ namespace ConsoleApp01
                 Console.WriteLine("");
             }
 
+            Pessoa pessoa1 = new Pessoa();
+            pessoa1.falar("OLAAA!!");
 
            
 

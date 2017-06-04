@@ -24,6 +24,13 @@ namespace ConsoleApp01
             //decimal resultado = a / b;
             decimal]resultado = Convert.ToDecimal(a) / Convert.ToDecimal(b);
 
+            a = a + 1;
+            a++;
+            a--;
+            a += 5;
+            a -= 3;
+            Console.WriteLine(a)
+
 
             Console.ReadLine();
         }

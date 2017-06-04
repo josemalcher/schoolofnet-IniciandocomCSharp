@@ -345,6 +345,15 @@ Utilizando este método, podemos unir quantas variáveis quisermos em uma string
 
 ## <a name="parte6">Atribuição, incremento e decremento</a>
 
+```csharp
+            a = a + 1;
+            a++;
+            a--;
+            a += 5;
+            a -= 3;
+            Console.WriteLine(a)
+```
+
 [Voltar ao Índice](#indice)
 
 ---

@@ -6,15 +6,25 @@ namespace ConsoleApp02
 {
     class Pessoa
     {
-        public string nome;
-        public string sobrenome;
-        public int idade;
-        public char sexo;
+        private string nome;
+        private string sobrenome;
+        private int idade;
+        private char sexo;
+
+        public string Nome { get => nome; set => nome = value; }
+        public string Sobrenome { get => sobrenome; set => sobrenome = value; }
+        public int Idade
+        {
+            set{if (value >= 0) idade = value;}
+            get{ return idade; }
+        }
+        public char Sexo { get => sexo; set => sexo = value; }
+
         public Pessoa()
         {
-            nome = "Paulo";
-            sobrenome = "Silva";
-            idade = 23;
+            Nome = "Paulo";
+            Sobrenome = "Silva";
+            Idade = 23;
         }
         public void Falar(string mensagem)
         {

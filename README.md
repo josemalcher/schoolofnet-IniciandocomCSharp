@@ -782,6 +782,75 @@ Para Saber Mais:
 
 ## <a name="parte13">Encapsulamento</a>
 
+ O encapsulamento é uma forma de segurança, muito utilizada nas classes. Para encapsular um propriedade, basta alterarmos os modificadores de acesso, para private. Desta forma, estamos bloqueando o acesso externo e permitindo, somente, o acesso interno para aquela propriedade. Vejam no exemplo abaixo: 
+ 
+ ```csharp
+ using System; 
+ namespace ConsoleCsharp 
+ { 
+     public class Pessoa 
+     { 
+        private string nome;
+        private string sobrenome;
+        private int idade;
+        private char sexo;
+
+        public string Nome { get => nome; set => nome = value; }
+        public string Sobrenome { get => sobrenome; set => sobrenome = value; }
+        public int Idade { get => idade; set => idade = value; }
+        public char Sexo { get => sexo; set => sexo = value; }
+         public Pessoa() 
+         { 
+             nome = "Paulo"; 
+             sobrenome = "Silva"; 
+             idade = 23; 
+         } 
+         public void Falar(string mensagem) 
+         { 
+             Console.WriteLine(mensagem); 
+         }
+    } 
+} 
+ ``` 
+ 
+ Além de alterarmos o modificador de acesso para private, estamos criando um método público, com o mesmo nome da propriedade, porém com a primeira letra maiúscula. Esta é uma convenção adotada, mas vocês podem utilizar outro nome, se desejarem. Depois de criarmos este método público, declararemos mais dois métodos internos: **get** e **set**. O get tem a função de retornar o valor da propriedade em questão e o set, a função de atribuir valores, uma vez que não temos mais acesso externo, esta passa a ser a única forma de acesso. Depois de encapsular as propriedades na classe, devemos modificar o modo de chamá-las e também o modo de atribuição de valores. Devemos chamar com a primeira letra maiúscula, conforme convenção criada. 
+ 
+ ```csharp 
+ using System; 
+ namespace ConsoleCsharp 
+ { 
+     class ConsoleCsharp 
+     { 
+         static void Main() 
+         { 
+             Pessoa p = new Pessoa(); 
+             // Propriedades 
+             p.Nome = "João"; 
+             p.Sobrenome = "Gomes"; 
+             p.Idade = 20; 
+             p.Sexo = 'M'; 
+             // Método 
+             p.Falar(String.Format("Olá, sou o {0} {1} e tenho {2} anos", p.Nome, p.Sobrenome, p.Idade)); 
+             Console.ReadLine(); 
+         } 
+    } 
+} 
+ ``` 
+ 
+ Assim, estamos chamando os atributos encapsulados e tendo o mesmo resultado. O Visual Studio nos ajuda a criar este encapulamento, basta configurarmos a propriedade como private, depois clicar em cima do nome da propriedade com o botão direito do mouse e ir até **Refactor/Encapsulate Field**. Desta forma, ele procurará todas as ocorrências que existam no código e perguntará se queremos implementar a maneira correta de acesso. Basta aceitar e ele configurará tudo. Além de proteger os dados de uma acesso externo, podemos aproveitar os métodos **set** de atribuição e fazer algumas validações. Um exemplo que podemos dar é referente a idade. Esta propriedade não pode ser negativa, uma vez que não existe idade negativa. Vejam o que podemos fazer para resolver este problema. Vejam o exemplo: 
+ 
+ ```csharp 
+     private int idade;
+     public int Idade
+        {
+            set{if (value >= 0) idade = value;}
+            get{ return idade; }
+        }
+ ``` 
+ Apesar de podermos alterar o método **get**, não é muito usual e aconselhável, uma vez que o get tem função, apenas, de retornar algum dado. Existe a possibilidade de aplicar alguns filtros, antes de retornar, mas não é muito usual.
+
+ Para saber + [Encapsulamento e Modificadores de Acesso](https://www.caelum.com.br/apostila-csharp-orientacao-objetos/encapsulamento-e-modificadores-de-acesso/)
+
 [Voltar ao Índice](#indice)
 
 ---

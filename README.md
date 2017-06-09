@@ -549,11 +549,13 @@ Pessoa pessoa1 = new Pessoa();
          // Utilizando String Format 
          // Console.WriteLine(String.Format("{0} {1}", mensagem, valor) ); 
          Console.WriteLine(mensagem + valor);
-         } static void Main() { 
+         } 
+         static void Main() 
+         { 
              int numero = 100.33m; 
              ImprimirValor(numero, "Eu informei o valor : "); 
              Console.ReadLine(); 
-     } 
+        } 
 } 
  ``` 
  

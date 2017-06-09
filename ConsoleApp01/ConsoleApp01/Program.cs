@@ -4,8 +4,14 @@ namespace ConsoleApp01
 {
     class Program
     {
+        public static void ImprimirValor(decimal valor, string mensagem)
+        {
+            // Utilizando String Format 
+            // Console.WriteLine(String.Format("{0} {1}", mensagem, valor) ); 
+            Console.WriteLine(mensagem + valor);
+        }
 
-        static void Soma10(int valor)
+        static void Soma10(ref int valor)
         {
             valor += 10;
             Console.WriteLine(valor);
@@ -106,7 +112,7 @@ namespace ConsoleApp01
 
             // Parâmetros
             int valorInicial = 20;
-            Soma10(valorInicial);
+            Soma10(ref valorInicial);
             Console.WriteLine(valorInicial);
             
 

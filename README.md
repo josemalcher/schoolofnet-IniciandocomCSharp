@@ -616,6 +616,166 @@ Pessoa pessoa1 = new Pessoa();
 
 ## <a name="parte12">Classes</a>
 
+Para falarmos de classes e objetos vamos apagar, novamente, todo conteúdo e exemplos que fizemos até agora, deixando somente a estrutura inicial. A maneira mais próxima de atingir um exemplo real, dentro de um sistema, é utilizando uma classe ou um objeto. Quando utilizamos o termo, exemplos reais, estamos querendo falar sobre pessoas, carros, empregado, documento e etc. Tudo que for um contexto, da vida real, e que conseguimos transformar em código, através das classes e objetos. O primeiro passo será criarmos a nossa classe de exemplo. 
+
+Ela se chamará **Pessoa**. Para criarmos uma classe, basta acessarmos a pasta raiz do projeto e adicionarmos um novo arquivo com o nome **Pessoa.cs**. O Visual Studio já permite criar um arquivo do tipo **class**. Isso pode ser feito manualmente. O importante é observarem que, quando criamos um arquivo do tipo classe, ele já vem com um **namespace** configurado. Mais importante, ainda, é saberem que, para conseguirem utilizar esta classe, em outros contextos, eles devem estar no mesmo namespace, caso contrário, o Visual Studio não a encontrará. 
+
+## Estrutura da classe 
+
+```csharp 
+
+using System; 
+namespace ConsoleCsharp 
+{ 
+    public class Pessoa 
+    { 
+        public string nome; 
+        public string sobrenome; 
+        public idade; 
+        public char sexo; 
+        // Construtor public Pessoa() { } 
+        public void Falar(string mensagem) 
+        {  
+            Console.WriteLine(mensagem); 
+        } 
+    } 
+} 
+
+``` 
+
+Observem que temos o **namespace** englobando toda nossa classe e depois configuramos uma classe com modificador de acesso **public**. 
+Significa que, outros contextos que estiverem dentro do mesmo namespace, conseguirão enxergar esta classe, caso fosse private, nem estando no mesmo namespace seria possível visualizá-la. 
+
+Uma classe é sempre composta por propriedades e métodos. Também são conhecidas como características e comportamentos. 
+
+Em nosso exemplo temos algumas propriedades como: nome, sobrenome, idade e sexo. Existe também um método chamado **Falar**, que imprime uma frase no console. Trata-se de uma classe muito simples. 
+
+## Instanciando uma classe 
+
+```csharp
+using System; 
+namespace ConsoleCsharp 
+{ 
+    class ConsoleCsharp 
+    { 
+        static void Main() 
+        { 
+            Pessoa p = new Pessoa(); 
+            string mensagem = "Olá, falei"; 
+            p.Falar(mensagem); 
+            Console.ReadLine(); 
+            } 
+    } 
+}
+```
+
+O primeiro detalhe que devem perceber é que estamos utilizando o mesmo namespace, para que seja possível a comunicação com a classe. Depois, estamos utilizando uma classe pública que seria o segundo fator de comunicação. 
+
+Quando criamos um objeto de uma classe, estamos criando a representação da classe. A representação de uma classe é criada a partir de um método conhecido como **construtor**. Para criar um construtor, basta criar um método com o mesmo nome da classe. 
+
+Desta forma podemos instanciar um objeto sem que o Visual Studio apresente algum erro. Depois que instanciamos um objeto, basta que declaremos o objeto seguido de ponto, para ter acesso a todos os métodos e propriedades que sejam públicas. Vejam um exemplo de acesso a um método e a uma propriedade: `p.name = "João"` `p.Falar('Minha mensagem')` Agora que sabemos como acessar propriedades de um objeto, iremos popular a nossa pesso **p**. 
+
+```csharp 
+using System; 
+namespace ConsoleCsharp 
+{ 
+    class ConsoleCsharp 
+    { 
+        static void Main() 
+        { 
+            Pessoa p = new Pessoa(); 
+            // Propriedades 
+            p.nome = "João"; 
+            p.sobrenome = "Gomes"; 
+            p.idade = 20; 
+            p.sexo = 'M'; 
+            // Método 
+            p.Falar(String.Format("Olá, sou o {0} {1} e tenho {2} anos", p.nome, p.sobrenome, p.idade)); 
+            Console.ReadLine(); 
+            } 
+    } 
+} 
+```
+
+ Desta forma, criamos um objeto, adicionamos valores a todas as propriedades e acionamos o método **Falar**, passando a mensagem, utilizando propriedades do próprio objeto. Vale lembrar que, quando trabalhamos com objetos, se intanciamos outro objeto com o mesmo nome, perderemos todas as informações anteriores, porque ele separa outro espaço na memória para o armazenamento de dados e apaga o espaço reservado, anteriormente. 
+
+ ```csharp
+ static void Main() 
+ { 
+     Pessoa p = new Pessoa(); 
+     // Propriedades 
+     p.nome = "João"; 
+     p.sobrenome = "Gomes"; 
+     p.idade = 20; 
+     p.sexo = 'M'; 
+     Pessoa p = new Pessoa(); 
+     // Método 
+     p.Falar(String.Format("Olá, sou o {0} {1} e tenho {2} anos", p.nome, p.sobrenome, p.idade)); 
+     Console.ReadLine(); } 
+ ``` 
+
+ Observem que, antes de acionar o método **Falar**, criamos outro objeto da classe Pessoa, em uma variável com o mesmo nome da anterior. Isso fará com que nosso método imprima a frase, mas com valores nulos, porque os nossos dados setados, anteriormente, foram perdidos. 
+ 
+ Façam este teste para checarem. Caso coloquem outro nome para o objeto, o código continua o mesmo, imprimindo da mesma forma, o grande problema é criar um objeto com o mesmo nome do anterior. Fiquem atentos. O mesmo acontece quando colocamos outro valor para alguma propriedade, antes de exibir um método, isso significa que o valor impresso sempre será o último atribuído. # Utilizando construtor para iniciar dados Podemos utilizar o construtor de uma classe para iniciar os objetos instanciados com valores preestabelecidos. Isso não significa que o usuário não possa modificar depois, significa, apenas, que as propriedades terão valores iniciais. Vejam o exemplo: 
+ 
+ ```csharp 
+ using System; 
+ namespace ConsoleCsharp 
+ { 
+     public class Pessoa 
+     { 
+         public string nome; 
+         public string sobrenome; 
+         public int idade; 
+         public char sexo; 
+         public Pessoa() 
+         { 
+             nome = "Paulo"; 
+             sobrenome = "Silva"; 
+             idade = 23; 
+         } 
+         public void Falar(string mensagem) 
+         { 
+             Console.WriteLine(mensagem); 
+         } 
+    } 
+} 
+ ``` 
+ 
+ Agora, toda vez que instanciarmos um objeto, as propriedades nome, sobrenome e idade, terão um valor padrão, conforme exemplo acima. 
+ 
+ No exemplo abaixo, manteremos o exemplo anterior, onde adicionamos os dados, manualmente, e em seguida, instanciaremos o mesmo objeto, mas não adicionaremos valor. Desta forma, vocês conseguirão notar que o valores foram apagados, mas outros valores foram adicionados, automaticamente, pelo construtor. 
+ 
+ ```csharp 
+ using System; 
+ namespace ConsoleCsharp 
+ { 
+     class ConsoleCsharp 
+     { 
+         static void Main() 
+         { 
+             Pessoa p = new Pessoa(); 
+             // Propriedades 
+             p.nome = "João"; 
+             p.sobrenome = "Gomes";
+             p.idade = 20; 
+             p.sexo = 'M'; 
+             // Método 
+             p.Falar(String.Format("Olá, sou o {0} {1} e tenho {2} anos", p.nome, p.sobrenome, p.idade)); 
+             p = new Pessoa(); 
+             // Método 
+             p.Falar(String.Format("Olá, sou o {0} {1} e tenho {2} anos", p.nome, p.sobrenome, p.idade)); 
+             Console.ReadLine(); 
+        } 
+    } 
+} 
+ ```
+ 
+ Fiquem atentos ao trabalharem com objetos. Sempre que precisarem de novos objetos, vocês deverão criar com outros nomes para não perderem os dados. Vocês podem instanciar quantos objetos forem necessários.
+
+Para Saber Mais:  
+[Classes e objetos](https://www.caelum.com.br/apostila-csharp-orientacao-objetos/classes-e-objetos/)
+
 [Voltar ao Índice](#indice)
 
 ---

@@ -540,6 +540,74 @@ Pessoa pessoa1 = new Pessoa();
 
 ## <a name="parte11">Parâmetros</a>
 
+ Todo método pode, ou não, receber parâmetros para sua execução. Vejam alguns exemplos de métodos com parâmetros. 
+ 
+ ```csharp
+ using System; 
+ class ConsoleCsharp { 
+     public static void ImprimirValor(decimal valor, string mensagem) { 
+         // Utilizando String Format 
+         // Console.WriteLine(String.Format("{0} {1}", mensagem, valor) ); 
+         Console.WriteLine(mensagem + valor);
+         } static void Main() { 
+             int numero = 100.33m; 
+             ImprimirValor(numero, "Eu informei o valor : "); 
+             Console.ReadLine(); 
+     } 
+} 
+ ``` 
+ 
+ Para a declaração do método, não modificamos nada nos padrões já passados, apenas adicionamos os parâmetros, informando o tipo de cada um, dentro dos parênteses. 
+ 
+ Não existe um número máximo de parâmetros, podemos adicionar quantos o método precisar, de acordo com o projeto. A chamada do método não muda. Agora, temos a necessidade de passar os parâmetros, que são exigidos. 
+ 
+ Fiquem atentos na ordem que os parâmetros são passados, eles deverão estar na mesma ordem que são passados no método. 
+ 
+ ### Exemplo de parâmetro sem referência 
+ 
+ ```csharp
+ using System; 
+ class ConsoleCsharp { 
+     static void Soma10(int valor) { 
+         valor += 10; 
+         Console.WriteLine(valor); 
+         } 
+         static void Main() { 
+             int valorInicial = 20; 
+             Soma10(valorInicial); 
+             Console.WriteLine(valorInicial); 
+             Console.ReadLine(); 
+        } 
+} 
+ ``` 
+ 
+ Estamos imprimindo duas vezes o resultado: uma vez dentro da função e outra, logo depois da chamada da função. Fizemos isso para vocês observarem que, mesmo a função somando 10 na variável, quando a imprimimos, depois da função, o valor dela continua sendo o mesmo. 
+ 
+ Neste caso, ela começa com o valor 20 e dentro do método passa a ser 30, mas, logo depois ela volta a ser 20. Isso acontece porque dentro do método o escopo é outro, não tem o poder de alterar a variável que se encontra fora dele. 
+ 
+ Ocorre que a linguagem cria uma cópia do valor da variável e altera esta cópia, mantendo a variável original, com o mesmo valor. Para conseguirmos alterar o valor final da variável precisamos passar o nosso parâmetro como referência, desta maneira não estamos passando uma cópia, mas sim um apontamento para o espaço de memória que esta variável ocupa em nosso computador. Desta maneira estamos trabalhando com ponteiros. 
+ 
+ Quando passamos o parâmetro como referência, o método tem o poder de alterar o valor desta variável porque se trata da variável e não uma cópia dela. 
+ 
+ ### Exemplo de parâmetro com referência 
+ 
+ ```csharp 
+ using System; 
+ class ConsoleCsharp { 
+     static void Soma10(ref int valor) { 
+         valor += 10; 
+         Console.WriteLine(valor); 
+         } static void Main() { 
+             int valorInicial = 20; 
+             Soma10(ref valorInicial); 
+             Console.WriteLine(valorInicial); 
+             Console.ReadLine(); 
+        } 
+} 
+ ``` 
+ 
+ A palavra reservada **ref** deve ser passada tanto na chamada do método quanto no método. Analisem o exemplo acima e verifiquem que agora teremos duas vezes o valor 30, sendo impressos.
+
 [Voltar ao Índice](#indice)
 
 ---

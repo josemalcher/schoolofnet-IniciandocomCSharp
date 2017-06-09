@@ -4,6 +4,14 @@ namespace ConsoleApp01
 {
     class Program
     {
+
+        static void Soma10(int valor)
+        {
+            valor += 10;
+            Console.WriteLine(valor);
+
+        }
+
         static void Main(string[] args)
         {
             //int matricula = 10;
@@ -96,7 +104,11 @@ namespace ConsoleApp01
             Pessoa pessoa1 = new Pessoa();
             pessoa1.falar("OLAAA!!");
 
-           
+            // Parâmetros
+            int valorInicial = 20;
+            Soma10(valorInicial);
+            Console.WriteLine(valorInicial);
+            
 
 
             Console.ReadLine();

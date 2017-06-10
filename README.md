@@ -857,6 +857,51 @@ Para Saber Mais:
 
 ## <a name="parte14">Struct/Enum</a>
 
+Outras estruturas que temos no C# são: **Structs** e **Enums**. # Estrutura Struct 
+
+```csharp
+    public struct minhaData 
+    { 
+        public DateTime dataAtual; 
+    } 
+``` 
+
+Observem que a estrutura é muito parecida com a uma classe normal, mas ela é caracterizada por nos oferecer recursos menores do que uma classe pode oferecer. Significa que, se a struct estiver com muitas responsabilidades, está na hora de transformar a struct em uma classe. 
+
+### Utilizando em nosso método Main 
+
+```csharp 
+minhaData m = new minhaData(); 
+m.dataAtual = DateTime.Now; 
+Console.WriteLine(m.dataAtual); 
+``` 
+
+Notem que uma struct é algo muito simples, que podemos utilizar para configurações pontuais, em determinados contextos. Um outro exemplo que pode ser utilizado é para setar algum tipo de cor, onde podemos informar o código RGB e utilizar em diversos lugares do nosso projeto. 
+
+### Estrutura Enum 
+
+```csharp
+// Estrutura Enum 
+public enum Sexo { Masculino = 1, Feminino = 2 } 
+// Encapsulamento modificado de char para Enum 
+public Sexo sexo; 
+public Sexo Sexo { set { sexo = value; } get { return sexo; } } 
+``` 
+
+Como o tipo **char** aceita apenas um caracter, ele serve para trabalharmos com sexo, uma vez que só existem duas opções, mas, suponham que alguém possa digitar um caracter errado e de alguma forma não tratamos esta possibilidade. Significa que teríamos um valor desconhecido para nosso projeto. Uma forma de resolver este problema é utilizando Enum, uma vez que setamos, anteriormente, os valores possíveis. Vejam um exemplo de como utilizar a estrutura enum, mostrada acima. 
+
+```csharp 
+    p.Sexo = Sexo.Masculino; 
+    Console.WriteLine(p.Sexo); 
+    Console.ReadLine(); 
+``` 
+
+Utilizamos Enums, sempre que temos uma lista de opções que não se alteram. 
+
+Exemplos: *Meses do ano* Dias da semana
+
+Conclusão Enum e Struct são recursos muito interessantes e muito utilizadas, principalmente os Enums. Façam alguns testes, criem mais Enums e Structs para testarem e fixarem o conteúdo. Lembrem-se que Structs não são classes e devem ter uma estrutura simples.
+
 [Voltar ao Índice](#indice)
 
 ---

@@ -908,6 +908,130 @@ Conclusão Enum e Struct são recursos muito interessantes e muito utilizadas, p
 
 ## <a name="parte15">Fila, Pilha e Listas</a>
 
+ ### Fila 
+ 
+ Fila é um nome comum para nós e temos como exemplo uma fila de um banco. A primeira pessoa que chegar na fila do banco, será a primeira a ser atendida, então podemos dizer que o primeiro elemento que entra, em uma fila, será o primeiro a sair dela. O C# nos fornece uma estrutura para trabalharmos com filas. Vejam a estrutura abaixo: 
+ 
+ ```csharp 
+ using System; 
+ using System.Collections; 
+ namespace ConsoleCsharp 
+ { 
+     class ConsoleCsharp 
+     { 
+         static void Main() 
+         { 
+             Queue fila = new Queue(); 
+             fila.Enqueue("Maria"); 
+             fila.Enqueue("Paulo"); 
+             fila.Enqueue("Junior"); 
+             fila.Enqueue("Ana"); 
+             while(fila.Count > 0) 
+             { 
+                 var nome = fila.Dequeue(); 
+                 Console.WriteLine(nome); 
+             } 
+             Console.ReadLine(); 
+         } 
+    } 
+} 
+ 
+ ```
+ Em primeiro lugar observem que tivemos que importar outra **dll** do início do projeto. A dll chamada **System.Collections**. Desta forma, conseguimos trabalhar com filas. Notem que as filas no C# são conhecidas como **Queue**. Assim, declaramos uma fila chamada **fila** com o código abaixo: `Queue fila = new Queue();` Depois disso fomos adicionando itens a fila da seguinte forma: `fila.Enqueue("Maria");` Para remover um item da fila utilizamos: `fila.Dequeue();` Utilizamos o **Dequeue** na estrutura de repetição **while**, para mostrar todos os itens da fila. É extremamente importante o papel do Dequeue na estrutura de repetição, uma vez que ele desempilha, sempre, um elemento fazendo com que o **file.Count** seja decrementado, caso contrário teríamos um típico caso de loop infinito, porque a fila sempre seria maior do que zero. Caso queiram , somente, o próximo elemento da fila, vocês podem utilizar o **peek**. `fila.Peek();` 
+ 
+ ```csharp 
+    var proximo = fila.Peek(); 
+    Console.WriteLine(proximo); 
+ ``` 
+ 
+ Para utilizar o **Peek** não façam o exemplo do **while** antes, porque o nosso exemplo remove todos os elementos da fila. Para testar o Peek, comente o while. Utilize o **Dequeue** antes do Peek para verem que sempre vai pegando o próximo.  
+ 
+ ### Pilha 
+ 
+ Pilhas no C# são conhecidas como **Stack**. Para exemplificar pilhas, imaginem uma pilha de pratos, onde o conceito é que o último a ser empilhado deverá ser o primeiro a ser retirado, uma vez que não conseguimos retirar o primeiro sem derrubar os demais. 
+ 
+ ```csharp 
+ static void Main() 
+ { 
+     Stack pilha = new Stack(); 
+     pilha.Push("Prato 1"); 
+     pilha.Push("Prato 2"); 
+     pilha.Push("Prato 3"); 
+     pilha.Push("Prato 4"); 
+     pilha.Push("Prato 5"); 
+     
+     while (pilha.Count > 0) 
+     { 
+         var prato = pilha.Pop(); 
+         Console.WriteLine(prato); 
+     } 
+     Console.ReadLine(); 
+} 
+ ``` 
+ 
+ Notem que estamos fazendo o mesmo processo que fizemos, anteriormente, com a fila. Agora, a lógica é inversa. O primeiro a ser empilhado será o último a ser removido. Adicionamos elementos a uma pilha com o **Push** e removemos com o **Pop**. O **Peek** funciona da mesma forma que nas filas, podemos então pegar o próximo elemento a ser desempilhado. 
+ 
+ ```csharp 
+    var proximo = pilha.Peek(); 
+    Console.WriteLine(proximo); 
+ ``` 
+ 
+ ### Listas 
+ 
+ Para criarmos uma lista, existe a palavra reservada **ArrayList** que segue o mesmo padrão de declaração. Porém, listas não seguem nenhum padrão como, pilhas e filas, onde existe ordem para entrar e para sair. Neste caso, adicionamos no local que quisermos e removemos o item que quisermos. Existe uma flexibilidade maior para trabalhar com itens e para listar uma lista, podemos utilizar a estrutura de repetição **for** que será mais fácil para exemplificar. 
+ 
+ ```csharp
+ static void Main() 
+ { 
+     ArrayList lista = new ArrayList(); 
+     lista.Insert(0,"Item 0"); 
+     lista.Insert(1,"Item 1"); 
+     lista.Insert(2,"Item 2"); 
+     lista.Insert(3,"Item 3"); 
+     lista.Insert(4,"Item 4"); 
+     
+     for (int i = 0; i < lista.Count; i++) 
+     { 
+         var item = lista[i]; 
+         Console.WriteLine(item); 
+     } 
+     Console.ReadLine(); 
+} 
+ ``` 
+ 
+ Notem que cada estrutura tem sua particularidade. Neste caso de listas utilizamos o **Insert**, para adicionar novos elementos. Vejam como adicionaremos um elemento dentro de nossa lista, na posição que quisermos e ele irá substituir a posição atual do elemento. 
+ 
+ ```csharp
+ static void Main() 
+ { 
+     ArrayList lista = new ArrayList(); 
+     lista.Insert(0,"Item 0"); 
+     lista.Insert(1,"Item 1"); 
+     lista.Insert(2,"Item 2"); 
+     lista.Insert(3,"Item 3"); 
+     lista.Insert(4,"Item 4"); 
+     lista.Insert(2,"INTRUSO"); 
+     
+     for (int i = 0; i < lista.Count; i++) 
+     { 
+         var item = lista[i]; 
+         Console.WriteLine(item); 
+     } 
+     Console.ReadLine(); 
+} 
+ ``` 
+ 
+ Rodem o projeto para visualizar o exemplo e verão que o elemento foi inserido na posição 2, que configuramos. Para remover um elemento, utilizamos **Remove** ou **RemoveAt**, passando o elemento que queremos remover. Vejam exemplos: 
+ 
+ ```csharp
+    lista.Remove(lista[2]); 
+    lista.RemoveAt(4); 
+ ``` 
+ 
+ ## Conclusão 
+ 
+ Chegamos ao final do conteúdo de Iniciando com C#. Esperamos que tenham gostado e não parem de procurar novos temas em nosso site. Até o próximo conteúdo.
+
 [Voltar ao Índice](#indice)
 
 ---
